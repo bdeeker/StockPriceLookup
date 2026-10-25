@@ -1,0 +1,35 @@
+﻿* {
+    box-sizing: border-box; /* boxes don't grow wider than is set */
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    max-width: 480px; /* keeps the page narrow */
+    margin: 40px auto; /* centered margin top and bottom 40px */
+    padding: 0 16px; /* stops text touching screen edges on a phone */
+    color: #222;
+}
+
+form {
+    display: flex; /* flex and gap puts everyting in one row with even spacing */
+    gap: 8px;
+    align-items: center;
+}
+
+input {
+    flex: 1; /* text box takes whatever space is left over */
+    padding: 8px;
+    font-size: 1rem;
+    text-transform: uppercase; /* only changes how it looks. The server's toUpperInvariant does the real conversion */
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 16px;
+    font-size: 1.1rem;
+}
