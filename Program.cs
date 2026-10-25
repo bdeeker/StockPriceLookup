@@ -9,6 +9,12 @@ builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
+// Makes a visit to / to serve index.html
+app.UseDefaultFiles();
+
+// Serve files from wwwroot folder
+app.UseStaticFiles(); 
+
 // {ticker} is the route parameter. That part of the URL is passed into the string called ticker
 // async because calling Tiingo takes time
 // the parameters IHttpClientFactory and IConfiguration are seen by .NET which passes them in. This is Dependency Injection
