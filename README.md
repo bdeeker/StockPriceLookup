@@ -1,6 +1,8 @@
 ﻿# StockPriceLookup
 A simple web app that looks up the most recent closing price of a US stock using Tiingo's free API.
 
+URL is http://stockpricelookup.runasp.net/
+
 ## How it works
 The user enters a ticker symbol such as AAPL and clicks Look up. app.js sends a GET request with fetch to /api/price/{ticker}. ASP.NET Core routes it to the MapGet endpoint in Program.cs, which checks the ticker is 1 to 10 letters, calls Tiingo with the API token, and returns just the ticker, closing price and date as JSON. app.js shows the result on the page, or the error message if something went wrong.
 
